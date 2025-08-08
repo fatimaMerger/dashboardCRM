@@ -1,6 +1,8 @@
 <script>
+import InputUI from './InputUI.vue';
+
 export default {
-    name: 'AdminDashboard',
+    name: 'Leads',
 };
 </script>
 <template>
@@ -220,6 +222,7 @@ export default {
                 </button>
             </div>
         </aside>
+
         <div class="flex-1 flex flex-col">
             <header
                 class="fixed top-0 z-10 w-full flex items-center justify-between px-6 border-b border-gray-200 bg-white h-[80px]">
@@ -244,202 +247,204 @@ export default {
                 </button>
             </header>
 
+            <main class="mt-[80px] flex-1 overflow-y-auto custom-scrollbar h-[calc(100vh-80px)]">
 
-            <main class="mt-[80px] flex-1 overflow-y-auto custom-scrollbar h-[calc(100vh-80px)] p-6">
-                <nav class="mb-4 bg-white rounded-lg border-[#DCE0E5] border size-fit">
-                    <ul class="flex space-x-2 p-4">
-                        <li>
+                <div class="flex">
+                    <div class=" w-full mr-[303px]">
+                        <div class="flex space-x-6 border-b border-[#DCE0E5] bg-white px-6 py-4 mb-6">
                             <a href="#"
-                                class="bg-[#9B51E0] text-white font-poppins font-medium py-2 px-4 rounded-md text-sm">All</a>
-                        </li>
-                        <li>
+                                class=" text-sm font-poppins  text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Activity
+                            </a>
                             <a href="#"
-                                class="text-gray-600 font-poppins font-medium py-2 px-4 rounded-md text-sm hover:bg-white rounded-lg">Unread</a>
-                        </li>
-                        <li>
+                                class=" text-sm font-poppins  text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Email
+                            </a>
                             <a href="#"
-                                class="text-gray-600 font-poppins font-medium py-2 px-4 rounded-md text-sm hover:bg-white rounded-lg">Tasks</a>
-                        </li>
-                        <li>
+                                class=" text-sm font-poppins  text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Comments
+                            </a>
                             <a href="#"
-                                class="text-gray-600 font-poppins font-medium py-2 px-4 rounded-md text-sm hover:bg-white rounded-lg">Contacts</a>
-                        </li>
-                        <li>
+                                class=" text-sm font-poppins  text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Data
+                            </a>
                             <a href="#"
-                                class="text-gray-600 font-poppins font-medium py-2 px-4 rounded-md text-sm hover:bg-white rounded-lg">System</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="space-y-4">
-                    <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-cyan-500 h-[104px] p-4 flex items-center">
+                                class=" text-sm font-poppins  text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Calls
+                            </a>
+                            <a href="#"
+                                class=" text-sm font-poppins text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Tasks
+                            </a>
+                            <a href="#"
+                                class=" text-sm font-poppins text-gray-500 hover:text-[#9B51E0] border-b-2 border-transparent hover:border-[#9B51E0] transition-colors">
+                                Notes
+                            </a>
+                            <a href="#"
+                                class="relative text-sm font-poppins font-semibold text-[#9B51E0] after:content-[''] after:absolute after:top-[36px] after:left-0 after:w-full after:h-[2px] after:bg-[#9B51E0]">
+                                Attachments
+                            </a>
+                        </div>
+
+                        <!-- <InputUI /> -->
+                        <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm mx-6">
+                            <h2 class="text-base font-semibold text-gray-800 mb-4">Person</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <!-- Salutation -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Salutation</label>
+                                    <select
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                        <option>Salutation</option>
+                                    </select>
+                                </div>
+
+                                <!-- First Name -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                    <input type="text" placeholder="First Name"
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                                </div>
+
+                                <!-- Last Name -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                    <input type="text" placeholder="Last name"
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" placeholder="Email"
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                                </div>
+
+                                <!-- Mobile No -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Mobile no</label>
+                                    <input type="tel" placeholder="mobile no"
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                                </div>
+
+                                <!-- Status -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Status <span
+                                            class="text-red-500">*</span></label>
+                                    <select
+                                        class="w-full h-12 border border-gray-300 rounded px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                        <option>New</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="text-xl font-medium px-6">Attachments</h1>
                         <div
-                            class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-check-circle">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-8.88"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                Task completed: Follow up with John Doe
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                Your scheduled follow-up task has been marked as completed.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-cyan-100 text-cyan-600 text-sm font-semibold px-3 py-1 rounded-full">Completed</span>
-                            <span class="text-gray-400 text-sm mt-2">1 hour ago</span>
+                            class="m-6 p-14 border border-gray-300 rounded-lg flex flex-col items-center justify-center text-center bg-gray-50">
+                            <div
+                                class="w-18 h-18 rounded-full overflow-hidden border-2 border-gray-300 bg-gray-100 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-paperclip-icon lucide-paperclip text-gray-400">
+                                    <path
+                                        d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-4 text-gray-700 font-semibold">No Attachments</h3>
+                            <p class="mt-1 text-sm text-gray-500">Drag and drop files here or click to browse</p>
+                            <button
+                                class="mt-6 flex items-center px-6 py-2 bg-[#9B51E0] text-white rounded-lg shadow-sm hover:bg-opacity-90 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus h-5 w-5 mr-2">
+                                    <path d="M5 12h14" />
+                                    <path d="M12 5v14" />
+                                </svg>
+
+
+                                Upload Attachment
+                            </button>
                         </div>
                     </div>
 
                     <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-pink-500 h-[104px] p-4 flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-user-plus">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="8.5" cy="7" r="4"></circle>
-                                <line x1="20" y1="8" x2="20" y2="14"></line>
-                                <line x1="23" y1="11" x2="17" y2="11"></line>
-                            </svg>
+                        class="space-y-6 bg-white p-6  border-l border-[#DCE0E5] fixed top-[80px] right-0 w-[303px] h-[calc(100vh-80px)] overflow-y-auto custom-scrollbar">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-lg font-semibold text-gray-800">Lead Summary</h2>
                         </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                New lead assigned: Sarah Malik
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                A new lead from the marketing campaign has been assigned to
-                                your pipeline.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-pink-100 text-pink-600 text-sm font-semibold px-3 py-1 rounded-full">Read</span>
-                            <span class="text-gray-400 text-sm mt-2">5 mins ago</span>
-                        </div>
-                    </div>
 
-                    <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-cyan-500 h-[104px] p-4 flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-check-circle">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-8.88"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                Task completed: Follow up with John Doe
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                Your scheduled follow-up task has been marked as completed.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-cyan-100 text-cyan-600 text-sm font-semibold px-3 py-1 rounded-full">Completed</span>
-                            <span class="text-gray-400 text-sm mt-2">1 hour ago</span>
-                        </div>
-                    </div>
+                        <div class="space-y-4 text-sm text-gray-600">
+                            <div>
+                                <p class=" text-gray-500">Lead ID</p>
+                                <p class="text-black">CRM-LEAD-2025-00006</p>
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Lead Owner</p>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-300">
+                                        <img src="https://i.pravatar.cc/100" alt="User Avatar"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                    <span class="text-dark font-semibold">
+                                        Administrator
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 ml-2">
+                                        Owner
+                                    </span>
+                                </div>
 
-                    <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-yellow-500 h-[104px] p-4 flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Organization</p>
+                                <p class="text-black">TechCorp Solutions</p>
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Industry</p>
+                                <p class="text-black">Technology</p>
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Website</p>
+                                <a href="#" class="text-blue-500">www.techcorp.com</a>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 pt-6 space-y-4">
+                            <h3 class="font-semibold text-gray-800">Contact Person</h3>
+                            <div>
+                                <p class=" text-gray-500">Name</p>
+                                <p class="text-black">Mr. John Smith</p>
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Email</p>
+                                <p class="text-blue-500">john.smith@techcorp.com</p>
+                            </div>
+                            <div>
+                                <p class=" text-gray-500">Mobile</p>
+                                <p class="text-black">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full bg-[#9B51E0] text-white py-2 rounded-lg font-medium flex items-center justify-center space-x-2 hover:bg-purple-600 transition-colors gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-alert-triangle">
+                                stroke-linejoin="round" class="lucide lucide-zap-icon lucide-zap">
                                 <path
-                                    d="M10.29 3.86L1.82 15a2 2 0 0 0 1.73 3h16.9a2 2 0 0 0 1.73-3l-8.47-11.14a2 2 0 0 0-3.46 0z">
-                                </path>
-                                <line x1="12" y1="9" x2="12" y2="13"></line>
-                                <line x1="12" y1="17" x2="12" y2="17"></line>
+                                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
                             </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                Overdue task: Client presentation prep
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                Your task for preparing the client presentation is now
-                                overdue.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-yellow-100 text-yellow-600 text-sm font-semibold px-3 py-1 rounded-full">Overdue</span>
-                            <span class="text-gray-400 text-sm mt-2">Yesterday</span>
-                        </div>
+                            Convert to Deal
+                        </button>
                     </div>
 
-                    <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-indigo-500 h-[104px] p-4 flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-mail">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22 6 12 13 2 6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                New message from Emma Wilson
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                Emma has sent you a message regarding the upcoming project
-                                meeting.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-green-100 text-green-600 text-sm font-semibold px-3 py-1 rounded-full">New</span>
-                            <span class="text-gray-400 text-sm mt-2">2 days ago</span>
-                        </div>
-                    </div>
 
-                    <div
-                        class="bg-white rounded-md shadow-sm border-l-4 border-yellow-500 h-[104px] p-4 flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-alert-triangle">
-                                <path
-                                    d="M10.29 3.86L1.82 15a2 2 0 0 0 1.73 3h16.9a2 2 0 0 0 1.73-3l-8.47-11.14a2 2 0 0 0-3.46 0z">
-                                </path>
-                                <line x1="12" y1="9" x2="12" y2="13"></line>
-                                <line x1="12" y1="17" x2="12" y2="17"></line>
-                            </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-gray-800 text-lg">
-                                Overdue task: Client presentation prep
-                            </h6>
-                            <p class="text-gray-500 text-sm">
-                                Your task for preparing the client presentation is now
-                                overdue.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-end ml-2">
-                            <span
-                                class="bg-yellow-100 text-yellow-600 text-sm font-semibold px-3 py-1 rounded-full">Overdue</span>
-                            <span class="text-gray-400 text-sm mt-2">Yesterday</span>
-                        </div>
-                    </div>
+
                 </div>
+
+
             </main>
         </div>
     </div>
